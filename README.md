@@ -35,5 +35,10 @@ I also built a closed-loop refrigeration model to see how the refrigerant behave
 
 ---
 
+### Project Links & Resources
+* [Presentation Slides](https://docs.google.com/presentation/d/1Z7y0GN761oVktsg2kIMHWrlEBNnztr6P/edit?usp=drive_link&ouid=110186731700141658012&rtpof=true&sd=true)
+* [Detailed Internship Report Document 1](https://docs.google.com/document/d/1Nr2aCkfY1_TTS2E2FaihmTFem50EAWNk/edit?usp=drive_link&ouid=110186731700141658012&rtpof=true&sd=true)
+* [Detailed Internship Report Document 2](https://docs.google.com/document/d/18M6gGqkUbdI7pCYNJdFg6OtwLGSj9mRh/edit?usp=drive_link&ouid=110186731700141658012&rtpof=true&sd=true)
+
 ### Files Included
 * `Internship_Report_Perugu_Venkata_Aditya.docx`: The detailed final report with all equations, parameters, and graphs.
