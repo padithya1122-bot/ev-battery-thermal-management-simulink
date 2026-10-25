@@ -1,35 +1,45 @@
 # EV Battery Thermal Management & R-1234yf Refrigeration Cycle (MATLAB / Simulink)
 
-This repository contains MATLAB / Simscape simulation models developed during the internship at **NoonRay Energy Pvt. Ltd. (IIT Madras Industrial Park, Chennai)**[cite: 5]. It focuses on EV battery thermal management (comparing conduction vs. convection) and a closed-loop vapor-compression refrigeration cycle using refrigerant R-1234yf[cite: 5].
+Hey there! This repository contains the MATLAB and Simscape simulation models I worked on during my internship at NoonRay Energy Pvt. Ltd. (IIT Madras Industrial Park, Chennai). 
+
+It covers two main parts of thermal management: looking at how EV batteries heat up and cool down, and simulating a complete closed-loop refrigeration system.
 
 ---
 
-## 📌 Project Overview
-Effective thermal management is critical for EV battery safety, performance, and longevity[cite: 7]. This project investigates:
-1. **Transient thermal behavior** of a lumped battery thermal mass under direct convection versus cold-plate conduction[cite: 5, 7].
-2. **Closed-loop vapor-compression refrigeration** using R-1234yf, validated via Pressure-Enthalpy (P-H) diagram analysis[cite: 5, 7].
+### Project Overview
+
+Battery thermal management is super important for keeping EV batteries safe and lasting a long time. In this project, I built and tested models in Simulink to see:
+1. How heat moves out of a battery when using direct air cooling (convection) versus using a liquid cold plate (conduction).
+2. How a standard vapor-compression refrigeration cycle works using R-1234yf refrigerant, checking the results on a Pressure-Enthalpy (P-H) diagram.
 
 ---
 
-## 🔋 Part I: Battery Thermal Management (Conduction vs. Convection)
-Two physical network models were simulated in MATLAB Simscape assuming a constant **1 kW heat generation** from a 300 kg battery[cite: 5, 7]:
+### Part 1: Battery Thermal Management (Convection vs. Conduction)
 
-* **Convective Model:** Direct heat loss from battery surface to ambient air ($T_{amb} = 313.15\text{ K}$)[cite: 5, 7].
-  * *Finding:* Temperature rise is inversely proportional to the convective heat transfer coefficient ($h$)[cite: 7]. Lower $h$ values ($5\text{ W/m}^2\cdot\text{K}$) result in significant temperature escalation ($308\text{ K} \to 320\text{ K}$)[cite: 5, 7].
-* **Conductive Model (Cold Plate):** Heat conducted from the battery through a solid layer into a liquid-cooled cold plate ($293.15\text{ K}$)[cite: 5, 7].
-  * *Finding:* Cold-plate conduction provides rapid thermal stabilization, dropping the battery temperature quickly and maintaining it close to the cold plate temperature ($\approx 293\text{ K}$)[cite: 5, 7]. Thinner conductive layers offer lower thermal resistance for quicker initial response[cite: 5, 7].
+I modeled a 300 kg battery generating a constant 1 kW of heat under two different cooling methods:
 
----
-
-## ❄️ Part II: R-1234yf Vapour-Compression Refrigeration Cycle
-A closed-loop multi-component refrigeration model was implemented to simulate full-system thermodynamic behavior:
-* **Evaporator Tube:** Low-pressure refrigerant absorbs heat from the load and undergoes phase change[cite: 5, 7].
-* **Positive Displacement Compressor:** Increases refrigerant pressure and enthalpy via mechanical work input[cite: 5, 7].
-* **Condenser (2-Pass + Manifolds):** Multi-stage heat rejection to surroundings[cite: 5, 7].
-* **P-H Validation:** Real-time state sensors feed data into a P-H diagram generator, successfully capturing all four thermodynamic phases (Evaporation, Compression, Condensation, and Throttling via flow restrictions)[cite: 5, 7].
+* **Convective Cooling:** Heat goes straight from the battery surface into the surrounding air. 
+  * *What I found:* The lower the convection coefficient ($h$), the higher the battery temperature rises (going from about 308 K up to 320 K with low airflow).
+* **Conductive Cooling (Cold Plate):** Heat moves by conduction from the battery through a solid layer into a cold plate kept at a lower temperature.
+  * *What I found:* Conduction cools the battery down much faster and keeps it stable close to the cold plate temperature (around 293 K). Thinner layers give a faster initial temperature drop.
 
 ---
 
-## 📂 Repository Contents
-* `Internship_Report_Perugu_Venkata_Aditya.docx`: Comprehensive report detailing model architectures, parameter sweeps, and analytical derivations[cite: 5].
-* `Internship_Presentation_Perugu_Venkata_Aditya.pptx`: Slide deck summarizing the thermal study and Simulink schematic layout[cite: 6].
+### Part 2: R-1234yf Vapour-Compression Refrigeration Cycle
+
+I also built a closed-loop refrigeration model to see how the refrigerant behaves through evaporation, compression, and condensation:
+* **Evaporator Tube:** Low-pressure refrigerant absorbs heat from the load and turns into vapor.
+* **Compressor:** Raises the pressure and enthalpy of the refrigerant using mechanical work.
+* **Condenser:** Rejects the heat back out to the surroundings.
+* **P-H Diagram Validation:** Sensors tracked the state points and plotted them on a P-H chart, confirming that the loop follows standard refrigeration theory smoothly without errors.
+
+---
+
+### Presentation Link
+You can view the full slide deck for this project here:
+👉 [Internship Presentation Slides](https://docs.google.com/presentation/d/1F4nCf8Y7j19DFytjSTn_ivQIyDvAwFRx/edit?usp=sharing&ouid=110186731700141658012&rtpof=true&sd=true)
+
+---
+
+### Files Included
+* `Internship_Report_Perugu_Venkata_Aditya.docx`: The detailed final report with all equations, parameters, and graphs.
