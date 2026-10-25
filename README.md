@@ -19,7 +19,7 @@ Battery thermal management is super important for keeping EV batteries safe and 
 I modeled a 300 kg battery generating a constant 1 kW of heat under two different cooling methods:
 
 * **Convective Cooling:** Heat goes straight from the battery surface into the surrounding air. 
-  * *What I found:* The lower the convection coefficient ($h$), the higher the battery temperature rises (going from about 308 K up to 320 K with low airflow).
+  * *What I found:* The lower the convection coefficient (h), the higher the battery temperature rises (going from about 308 K up to 320 K with low airflow).
 * **Conductive Cooling (Cold Plate):** Heat moves by conduction from the battery through a solid layer into a cold plate kept at a lower temperature.
   * *What I found:* Conduction cools the battery down much faster and keeps it stable close to the cold plate temperature (around 293 K). Thinner layers give a faster initial temperature drop.
 
@@ -32,12 +32,6 @@ I also built a closed-loop refrigeration model to see how the refrigerant behave
 * **Compressor:** Raises the pressure and enthalpy of the refrigerant using mechanical work.
 * **Condenser:** Rejects the heat back out to the surroundings.
 * **P-H Diagram Validation:** Sensors tracked the state points and plotted them on a P-H chart, confirming that the loop follows standard refrigeration theory smoothly without errors.
-
----
-
-### Presentation Link
-You can view the full slide deck for this project here:
-👉 [Internship Presentation Slides](https://docs.google.com/presentation/d/1F4nCf8Y7j19DFytjSTn_ivQIyDvAwFRx/edit?usp=sharing&ouid=110186731700141658012&rtpof=true&sd=true)
 
 ---
 
